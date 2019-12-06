@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".game.Game_Fragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tool:layout_constraintTop_toTopOf="parent"
+        tool:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/view_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="30sp"
+                tool:layout_constraintBottom_toBottomOf="parent"
+                tool:layout_constraintEnd_toEndOf="parent"
+                tool:layout_constraintEnd_toStartOf="@+id/view_score"
+                tool:layout_constraintStart_toStartOf="parent"
+                tool:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="16dp"/>
+
+            <TextView
+                android:id="@+id/view_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                tool:layout_constraintBottom_toBottomOf="parent"
+                tool:layout_constraintEnd_toEndOf="parent"
+                tool:layout_constraintStart_toEndOf="@+id/view_word"
+                tool:layout_constraintStart_toStartOf="parent"
+                tool:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="16dp"/>
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="@string/got_it"
+                android:textColor="@color/colorWhite"
+                tool:layout_constraintBottom_toBottomOf="parent"
+                tool:layout_constraintEnd_toEndOf="parent"
+                tool:layout_constraintStart_toEndOf="@+id/btn_skip"
+                tool:layout_constraintTop_toBottomOf="@id/view_word"
+                android:layout_margin="16dp"/>
+
+            <Button
+                android:id="@+id/btn_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:text="@string/skip"
+                tool:layout_constraintBottom_toBottomOf="parent"
+                tool:layout_constraintEnd_toStartOf="@+id/btn_next"
+                tool:layout_constraintStart_toStartOf="parent"
+                tool:layout_constraintTop_toBottomOf="@id/view_word"
+                android:layout_margin="16dp"/>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:id="@+id/view_time"
+                android:textSize="27sp"
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                tool:layout_constraintTop_toBottomOf="@id/btn_next"
+                tool:layout_constraintStart_toStartOf="parent"
+                tool:layout_constraintEnd_toEndOf="parent"
+                tool:layout_constraintBottom_toBottomOf="parent"
+                android:layout_margin="16dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
